@@ -9,12 +9,7 @@ def home():
     jp.Div(a=wp, text="Hello Werld Mas!", classes="font-serif text-lg")
     return wp
 
-@jp.SetRoute("/about")
-def about():
-    wp= jp.WebPage()
-    jp.Div(a=wp, text="Yeah!!!")
-    jp.Div(a=wp, text="YaaY!!!")
-    return wp
+
 
 # jp.Route("/", home)
 
