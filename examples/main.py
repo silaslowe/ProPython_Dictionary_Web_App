@@ -17,7 +17,7 @@ def home():
               d=d_output,
               classes="border border-blue-500 m-2 py-1 px-4 rounded "
                       "text-blue-600 hover:bg-red-500 hover:text-white")
-    jp.Div(a=div2, text="Div 2 div", classes="text-gray-500")
+    jp.Div(a=div2, text="Div 2 div", mouseenter=mouse_enter, mouseleave=mouse_leave, classes="text-gray-500")
 
     return wp
 
@@ -26,6 +26,14 @@ def sum_up(widget, msg):
     print("Hi")
     total = float(widget.in1.value) + float(widget.in2.value)
     widget.d.text = total
+
+
+def mouse_enter(widget, msg):
+    widget.text = "A mouse entered the house!"
+
+
+def mouse_leave(widget, msg):
+    widget.text = "The mouse leaved"
 
 
 # jp.Route("/", home)
